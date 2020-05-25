@@ -1,0 +1,220 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.App {
+  margin: 5rem 1rem 0;
+}
+
+.contentWrapper {
+  margin: 60px 0 0;
+}
+
+input,
+svg {
+  z-index: 0 !important;
+}
+
+.inputError {
+  border: 2px solid red !important;
+  color: red !important;
+}
+
+.aboutBlock,
+.availabilityBlock,
+.hourlyRateBlock,
+.hearAboutUsBlock,
+.uploadPhotoBlock {
+  margin-top: 20px;
+}
+
+.aboutBlock > div:first-child,
+.locationBlock > div:first-child,
+.availabilityBlock > div:first-child,
+.extraField > div:first-child,
+.hourlyRateBlock > div:first-child,
+.hearAboutUsBlock > div:first-child,
+.uploadPhotoBlock > div:first-child {
+  margin-bottom: 20px;
+}
+
+/* aboutBlock */
+.aboutBlock > div:last-child {
+  width: 100%;
+  max-width: 100% !important;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.aboutBlock .aboutBlock__counter {
+  text-align: right;
+}
+
+.aboutBlock .aboutBlock__counter--Max {
+  color: red;
+}
+
+.aboutBlock textarea {
+  height: 150px;
+  width: 100%;
+}
+
+/* availabilityBlock__weeksBlock */
+.availabilityBlock__weeksBlock {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.availabilityBlock__weeksInput {
+  margin-right: 10px;
+}
+
+.availabilityBlock__dateInput {
+  width: 200px;
+}
+
+.availabilityBlock__dateInput input,
+.availabilityBlock__weeksInput input {
+  height: 70px !important;
+}
+
+/* hourlyRateBlock */
+.hourlyRateBlock__error {
+  font-size: 13px;
+  color: rgb(255, 0, 0);
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.03);
+  margin-top: 10px;
+  display: flex;
+}
+
+.hourlyRateBlock__error span {
+  margin-left: 10px;
+}
+
+/* uploadPhotoBlock */
+.uploadPhotoBlock {
+  margin-bottom: 20px;
+}
+
+.uploadPhotoBlock__uploaderBlock {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.uploadPhotoBlock__input {
+  font-size: 17px;
+  margin: 15px 0 0 15px;
+  flex-grow: 1;
+}
+
+.uploadPhotoBlock__input svg {
+  margin-top: 5px;
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.uploadPhotoBlock__input svg:hover {
+  opacity: 0.8;
+}
+
+.uploadPhotoBlock__input span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.uploadPhotoBlock__input input {
+  width: 0;
+  height: 0;
+  padding: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  font-size: 0;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.uploadPhotoBlock__img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(230, 230, 237);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.uploadPhotoBlock img {
+  width: 200px;
+  height: 200px;
+}
+
+.uploadPhotoBlock img {
+  object-fit: contain;
+}
+
+.extraField {
+  animation: fadein 0.25s;
+  margin-top: 20px;
+}
+
+/* Responsive rules */
+@media only screen and (min-width: 600px) {
+  .App {
+    margin: 5rem 5rem 0;
+  }
+
+  .contentWrapper {
+    width: 500px;
+    margin: 60px auto 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .availabilityBlock__weeksBlock {
+    width: 80%;
+  }
+
+  .uploadPhotoBlock__img,
+  .uploadPhotoBlock img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .uploadPhotoBlock__input {
+    font-size: 13px;
+  }
+
+  .uploadPhotoBlock__input svg {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1023px) {
+  .availabilityBlock__weeksBlock {
+    width: 87%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .availabilityBlock__dateInput {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .availabilityBlock__weeksBlock {
+    width: 200px !important;
+  }
+}
